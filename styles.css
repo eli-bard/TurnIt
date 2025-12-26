@@ -1,0 +1,90 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #282c34; /* Fundo escuro */
+    color: #f0f0f0; /* Cor do texto claro */
+    margin: 0;
+}
+
+.game-container {
+    background-color: #3a3f47;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h1 {
+    color: #61dafb; /* Um azul ciano vibrante */
+    margin-bottom: 20px;
+}
+
+.grid-board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px); /* 5 colunas de 60px cada */
+    grid-template-rows: repeat(5, 60px);   /* 5 linhas de 60px cada */
+    gap: 5px; /* Espaço entre as células */
+    border: 3px solid #61dafb;
+    border-radius: 5px;
+    margin: 0 auto 20px auto; /* Centraliza e adiciona margem inferior */
+    width: fit-content; /* Ajusta a largura ao conteúdo */
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444b56;
+    border: 1px solid #555c69;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none; /* Impede seleção de texto */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.cell:hover {
+    background-color: #555c69;
+    transform: scale(1.05);
+}
+
+.cell.X {
+    color: #e0e0e0; /* X branco */
+}
+
+.cell.O {
+    color: #ff5c5c; /* O vermelho */
+}
+
+.message {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #a0a0a0;
+}
+
+.message.win {
+    color: #4CAF50; /* Verde para mensagem de vitória */
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.reset-button {
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.reset-button:hover {
+    background-color: #21a1f1;
+    transform: translateY(-2px);
+}
